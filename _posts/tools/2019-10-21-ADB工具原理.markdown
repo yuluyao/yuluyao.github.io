@@ -1,0 +1,41 @@
+---
+layout: post
+# title:  "Android dumpsys"
+date:   2019-10-21 14:11:52 +0800
+# categories: jekyll update
+published: true
+---
+
+## 概念
+
+Android 调试桥 (adb) 是一种功能多样的命令行工具，可让您与设备进行通信。adb 命令便于执行各种设备操作（例如安装和调试应用），并提供对 Unix shell（可用来在设备上运行各种命令）的访问权限。它是一种客户端-服务器程序，包括以下三个组件：
+
+- **客户端（adb client）**：用于发送命令。客户端在开发计算机上运行。您可以通过发出 adb 命令从命令行终端调用客户端。
+- **服务器（adb server）**：管理客户端和守护进程之间的通信。服务器在开发计算机上作为后台进程运行。
+- **守护进程 (adbd)**：在设备上运行命令。守护进程在每个设备上作为后台进程运行。
+
+## adb工作原理
+
+![adb 工作原理图][adb_work]
+
+- 当启动adb client时，会先检查是否有adb server进程在运行，如果没有，会先启动adb server进程。
+- adb server会与本地tcp5037端口绑定，并监听adb client发出的命令。所有adb client均通过5037端口与adb server通信。
+- adb server会与所有正在运行的设备建立连接，它会扫描5555~5585之间的奇数端口（共16个），一旦发现守护进程adbd，便会与相应端口建立连接。
+
+## 总结
+
+**adb client**：
+- 运行在开发计算机上。
+- 可通过终端调用adb client。
+- adb client可以发送各种命令。
+
+**adb server**：
+- 运行在开发计算机上。
+- 监听本地5037端口。
+- 启动adb client时，若adb server没有启动，就会启动adb server。
+- adb server启动后，会扫描5555-5585奇数端口，看是否有adbd进程在运行，若有，则与该端口的设备连接。
+
+**adbd**：
+- 守护进程，运行在手机上。
+
+[adb_work]:{{site.url}}/pics/adbd_client_server.png
