@@ -23,10 +23,7 @@ email: wushenggoo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   笑看嫣红染半山，逐风万里白云间；逍遥此生不为客，天地三才任平凡。
 
-webrick:
-  headers:
-    My-Header: My-Value
-    My-Other-Header: My-Other-Value
+
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
