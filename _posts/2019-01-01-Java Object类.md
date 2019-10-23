@@ -2,9 +2,7 @@
 layout: post
 ---
 
-- public final Class<?> <font color=red>getClass</font>()
 
-```java
 - public final Class<?> getClass()
 - public int hashCode()
 - public boolean equals(Object obj)
@@ -16,4 +14,4 @@ layout: post
 - public final native void wait(long millis, int nanos) throws InterruptedException
 - public final native void wait() throws InterruptedException
 - protected void finalize() throws Throwable
-```
+
