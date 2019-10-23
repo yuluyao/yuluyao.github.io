@@ -1,9 +1,9 @@
 ---
 layout: post
 # title:  "Android dumpsys"
-date:   2019-10-19 13:11:52 +0800
+# date:   2019-10-19 13:11:52 +0800
 # categories: jekyll update
-published: true
+# published: true
 ---
 
 ## dumpsys -l：查看所有可用服务，最常用到 dumpsys activity。

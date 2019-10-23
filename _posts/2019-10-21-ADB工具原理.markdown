@@ -1,9 +1,9 @@
 ---
 layout: post
-# title:  "Android dumpsys"
-date:   2019-10-21 14:11:52 +0800
+# title:  "Android adb 工具的原理"
+# date:   2019-10-21 14:11:52 +0800
 # categories: jekyll update
-published: true
+# published: true
 ---
 
 ## 概念
