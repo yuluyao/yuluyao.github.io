@@ -6,8 +6,8 @@ layout: post
 # published: true
 ---
 
-## dumpsys -l：查看所有可用服务，最常用到 dumpsys activity。
-## dumpsys activity -h：查看activity服务的用法。
+#### dumpsys -l：查看所有可用服务，最常用到 dumpsys activity。
+#### dumpsys activity -h：查看activity服务的用法。
 [-a] [-c] [-p PACKAGE] [-h] [WHAT]
 - -a：输出服务端状态。
 - -c：输出客户端状态。
@@ -31,5 +31,5 @@ WHAT：
 - package [PACKAGE_NAME]: all state related to given package
 - all: dump all activities
 - top: dump the top activity
-## 查看app的activity栈
+#### 查看app的activity栈
 - `adb shell dumpsys activity -p [PACKAGE_NAME] r | grep Activities`
