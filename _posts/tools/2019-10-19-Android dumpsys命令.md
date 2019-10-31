@@ -1,5 +1,6 @@
 ---
 layout: post
+category: tool
 # title:  "Android dumpsys"
 # date:   2019-10-19 13:11:52 +0800
 # categories: jekyll update
