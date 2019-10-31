@@ -32,4 +32,4 @@ WHAT：
 - all: dump all activities
 - top: dump the top activity
 #### 查看app的activity栈
-- `adb shell dumpsys activity -p [PACKAGE_NAME] r | grep Activities`
+- `adb shell dumpsys activity -p com.tps.tpslivevideo r |grep ActivityRecord | sed 's/ActivityRecord/\'$'\n/g' |grep [.][^.]*Activity`
