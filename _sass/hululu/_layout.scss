@@ -175,7 +175,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0 0;
   flex: 1;
 }
 
@@ -210,6 +210,9 @@
 /**
  * Posts
  */
+.post{
+  background-color: $article-color;
+}
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -226,7 +229,7 @@
 
 .post-content {
   padding-left: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-bottom: 0;
 
   h2 {
     @include relative-font-size(1.5);

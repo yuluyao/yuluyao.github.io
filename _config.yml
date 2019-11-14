@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 寒光一舍
+title: 十里丹青
 email: wushenggoo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  笑看嫣红染半山，逐风万里白云间；逍遥此生不为客，天地三才任平凡。
+  鹏抟九万，腰缠万贯，扬州鹤背骑来惯。事间关，景阑珊，黄金不富英雄汉，一片世情天地间。白，也是眼；青，也是眼。
 
 
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  yuluyao
