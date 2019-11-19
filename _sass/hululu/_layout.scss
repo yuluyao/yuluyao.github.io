@@ -174,16 +174,41 @@
 /**
  * Page content
  */
-.main {
-  padding: 0;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+main {
+  max-width: -webkit-calc(#{$main-width} );
+  max-width:         calc(#{$main-width} );
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$main-width} );
+    max-width:         calc(#{$main-width} );
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
 
 /* 主要内容区，文章列表，文章内容 */
-.content{
+.content {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+  @extend %clearfix;
 
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+
+  float: left;
 }
 
 // 文章列表
@@ -196,23 +221,53 @@
   }
 }
 
+// 文章
+article {
+  background-color: $content-color;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+
+  float: left;
+}
+
 /* 侧边区，文章目录 */
-.side{
+aside{
+  width: $side-width;
+
+  float: left;
+  position: sticky;
+  top: 0;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  ol,ul {
+    margin-left: 10px;
+  }
+  li {
+    list-style: none;
+  }
 
 }
 
 
 
-/**
- * Posts
- */
-.post {
-  padding: $spacing-unit/2;
-}
 
 .post-header {
   margin-bottom: $spacing-unit;
-  background-color: $content-color;
 }
 
 .post-title {
@@ -233,7 +288,6 @@
 .post-content {
   padding-left: $spacing-unit;
   margin-bottom: 0;
-  background-color: $content-color;
   float: left;
 
   h2 {
@@ -286,12 +340,6 @@
 
 }
 
-.post-side{
-  float: left;
-  position: sticky;
-  top: 0;
-  width: 200px;
-}
 
 .text-red {
   color: red;
