@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<div style="width: 50%;float: left; background-color: #ddffdd;">
+<div class="wrapper">
   {%- if site.categories.size > 0 -%}
 
 <!--  <h2 class="post-list-heading">文章分类</h2>-->
@@ -24,6 +24,34 @@ layout: default
   </ul>
   {%- endif -%}
 </div>
+
+<!--<aside >
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.hululu.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</aside>-->
 
 <!--<div style="float: left;">
   {%- if page.title -%}

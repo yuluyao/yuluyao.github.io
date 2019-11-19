@@ -174,19 +174,19 @@
 /**
  * Page content
  */
-.page-content {
+.main {
   padding: 0;
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.page-heading {
-  @include relative-font-size(2);
+/* 主要内容区，文章列表，文章内容 */
+.content{
+
 }
 
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
+// 文章列表
 .post-list {
   margin-left: 0;
   list-style: none;
@@ -196,15 +196,11 @@
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+/* 侧边区，文章目录 */
+.side{
+
 }
 
-.post-link {
-  display: block;
-  @include relative-font-size(1.125);
-}
 
 
 /**
@@ -212,11 +208,11 @@
  */
 .post {
   padding: $spacing-unit/2;
-  background-color: $article-color;
 }
 
 .post-header {
   margin-bottom: $spacing-unit;
+  background-color: $content-color;
 }
 
 .post-title {
@@ -229,9 +225,16 @@
   }
 }
 
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
 .post-content {
   padding-left: $spacing-unit;
   margin-bottom: 0;
+  background-color: $content-color;
+  float: left;
 
   h2 {
     @include relative-font-size(1.5);
@@ -281,6 +284,13 @@
   }
 
 
+}
+
+.post-side{
+  float: left;
+  position: sticky;
+  top: 0;
+  width: 200px;
 }
 
 .text-red {
