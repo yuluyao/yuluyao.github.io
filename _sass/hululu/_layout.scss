@@ -4,7 +4,7 @@
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  min-height: $gap * 1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -49,7 +49,7 @@
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: $spacing-unit / 2;
+    right: $gap / 2;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -107,12 +107,12 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: $gap 0;
 }
 
 .footer-heading {
   @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $gap / 2;
 }
 
 .contact-list,
@@ -124,49 +124,49 @@
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+  margin-left: -$gap / 2;
   @extend %clearfix;
 }
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  margin-bottom: $gap / 2;
+  padding-left: $gap / 2;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width: calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(35% - (#{$gap} / 2));
+  width: calc(35% - (#{$gap} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width: calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(20% - (#{$gap} / 2));
+  width: calc(20% - (#{$gap} / 2));
 }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width: calc(45% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(45% - (#{$gap} / 2));
+  width: calc(45% - (#{$gap} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width: calc(50% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(50% - (#{$gap} / 2));
+    width: calc(50% - (#{$gap} / 2));
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width: calc(100% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(100% - (#{$gap} / 2));
+    width: calc(100% - (#{$gap} / 2));
   }
 }
 
 @include media-query($on-palm) {
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width: calc(100% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(100% - (#{$gap} / 2));
+    width: calc(100% - (#{$gap} / 2));
   }
 }
 
@@ -175,78 +175,70 @@
  * Page content
  */
 main {
-  max-width: -webkit-calc(#{$main-width} );
-  max-width:         calc(#{$main-width} );
+  max-width: -webkit-calc(#{$main-width});
+  max-width: calc(#{$main-width});
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+  padding: $gap/2;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$main-width} );
-    max-width:         calc(#{$main-width} );
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-  }
+
+  //@include media-query($on-laptop) {
+  //  max-width: -webkit-calc(#{$main-width} );
+  //  max-width:         calc(#{$main-width} );
+  //}
 }
 
 /* 主要内容区，文章列表，文章内容 */
 .content {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+  width: 100%;
+  max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
+  max-width: calc(#{$content-width} - (#{$gap} * 2));
+  //margin-right: auto;
+  //margin-left: auto;
+  padding: $gap/2;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    max-width: -webkit-calc(#{$content-width} - (#{$gap}));
+    max-width: calc(#{$content-width} - (#{$gap}));
   }
 
   float: left;
+
 }
 
-// 文章列表
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit/3;
-  }
-}
 
 // 文章
 article {
+  width: 100%;
   background-color: $content-color;
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+  max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
+  max-width: calc(#{$content-width} - (#{$gap} * 2));
+  //margin-right: auto;
+  //margin-left: auto;
+  padding: $gap/2;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    max-width: -webkit-calc(#{$content-width} - (#{$gap}));
+    max-width: calc(#{$content-width} - (#{$gap}));
   }
 
   float: left;
+
 }
 
 /* 侧边区，文章目录 */
-aside{
+.side {
   width: $side-width;
+  background-color: $content-color;
 
-  float: left;
+  padding-top: 20px;
+
+  margin-left: $gap/3;
+
+  float: right;
   position: sticky;
   top: 0;
 
@@ -254,20 +246,29 @@ aside{
   text-overflow: ellipsis;
   overflow: hidden;
 
-  ol,ul {
-    margin-left: 10px;
+  ol, ul {
+    margin-left: 16px;
   }
-  li {
-    list-style: none;
+
+  @include media-query($on-laptop) {
+    display: none;
   }
 
 }
 
 
+// 文章列表
+.post-list {
+  margin-left: 0;
+  list-style: none;
 
+  > li {
+    margin-bottom: $gap/3;
+  }
+}
 
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $gap;
 }
 
 .post-title {
@@ -286,15 +287,15 @@ aside{
 }
 
 .post-content {
-  padding-left: $spacing-unit;
+  padding-left: $gap;
   margin-bottom: 0;
   float: left;
 
   h2 {
     @include relative-font-size(1.5);
     font-weight: bold;
-    margin-left: -$spacing-unit;
-    margin-top: $spacing-unit;
+    margin-left: -$gap;
+    margin-top: $gap;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
@@ -304,7 +305,7 @@ aside{
   h3 {
     @include relative-font-size(1.25);
     font-weight: bold;
-    margin-left: -$spacing-unit/2;
+    margin-left: -$gap/2;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.25);
