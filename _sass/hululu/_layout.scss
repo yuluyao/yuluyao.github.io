@@ -174,7 +174,7 @@
 /**
  * Page content
  */
-main {
+.site-main {
   max-width: -webkit-calc(#{$main-width});
   max-width: calc(#{$main-width});
   margin-right: auto;
@@ -182,76 +182,81 @@ main {
   padding: $gap/2;
   @extend %clearfix;
 
+  display: flex;
+  justify-content: center;
+  position: relative;
 
-  //@include media-query($on-laptop) {
-  //  max-width: -webkit-calc(#{$main-width} );
-  //  max-width:         calc(#{$main-width} );
-  //}
 }
 
 /* 主要内容区，文章列表，文章内容 */
 .content {
-  width: 100%;
+  //width: 100%;
   max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
   max-width: calc(#{$content-width} - (#{$gap} * 2));
-  //margin-right: auto;
-  //margin-left: auto;
-  padding: $gap/2;
-  @extend %clearfix;
-
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$gap}));
-    max-width: calc(#{$content-width} - (#{$gap}));
-  }
-
-  float: left;
-
-}
-
-
-// 文章
-article {
-  width: 100%;
   background-color: $content-color;
-  max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
-  max-width: calc(#{$content-width} - (#{$gap} * 2));
   //margin-right: auto;
   //margin-left: auto;
-  padding: $gap/2;
+  padding: 0 $gap/2;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$gap}));
-    max-width: calc(#{$content-width} - (#{$gap}));
+    max-width: -webkit-calc(#{$content-width} + (#{$gap} * 2));
+    max-width: calc(#{$content-width} + (#{$gap} * 2));
+    margin: 0 auto;
   }
 
-  float: left;
+  //overflow: hidden;
+  flex: 1;
+
 
 }
 
 /* 侧边区，文章目录 */
 .side {
   width: $side-width;
+  margin-left: 1em;
   background-color: $content-color;
-
   padding-top: 20px;
 
-  margin-left: $gap/3;
-
-  float: right;
+  align-self: flex-start;
+  position: -webkit-sticky;
   position: sticky;
-  top: 0;
-
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-
-  ol, ul {
-    margin-left: 16px;
-  }
+  top: 10px;
 
   @include media-query($on-laptop) {
     display: none;
+  }
+
+  ol, ul {
+    margin-left: .5em;
+  }
+
+  li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a {
+      &:link {
+        color: #333333;
+      }
+
+      &:visited {
+        color: #333333;
+      }
+
+      &:hover {
+        color: #333333;
+        text-decoration-line: none;
+        background-color: #aaffaa;
+      }
+
+      &:active {
+        color: #2a7ae2;
+      }
+    }
+
+
   }
 
 }
