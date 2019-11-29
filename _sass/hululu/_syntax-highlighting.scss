@@ -1,13 +1,19 @@
 /**
  * Syntax highlighting styles
  */
+
+
+.highlighter-rouge  {
+  background: #f4f4f4;
+}
+
 .highlight {
-  background: #fff;
+  //background: #fdd;
   @extend %vertical-rhythm;
 
-  .highlighter-rouge & {
-    background: #eef;
-  }
+  //.highlighter-rouge & {
+  //  background: #fdd;
+  //}
 
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error

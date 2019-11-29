@@ -294,6 +294,8 @@
   padding-left: $gap;
   margin-bottom: 0;
 
+  line-height: 1.6;
+
   h2 {
     @include relative-font-size(1.5);
     font-weight: bold;
