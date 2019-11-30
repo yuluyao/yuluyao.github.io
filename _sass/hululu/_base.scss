@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -19,13 +18,12 @@ body {
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   min-height: 100vh;
 }
-
 
 
 /**
@@ -39,14 +37,12 @@ ul, ol, dl, figure,
 }
 
 
-
 /**
  * `main` element
  */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
-
 
 
 /**
@@ -56,7 +52,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
 
 
 /**
@@ -69,7 +64,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
 
 
 /**
@@ -87,14 +81,12 @@ li {
 }
 
 
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
-
 
 
 /**
@@ -140,7 +132,6 @@ blockquote {
 }
 
 
-
 /**
  * Code formatting
  */
@@ -149,13 +140,9 @@ code {
   //@include relative-font-size(0.9375);
   border: 1px solid #f4f4f4;
   border-radius: 3px;
+  font-size: 90%;
 
   //background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-  font-size: 90%;
 }
 
 pre {
@@ -170,6 +157,13 @@ pre {
   }
 }
 
+code {
+  padding: 1px 5px;
+}
+
+code[class=highlighter-rouge]{
+  color: #FF33CC;
+}
 
 
 /**
@@ -177,7 +171,7 @@ pre {
  */
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$gap} * 2));
-  max-width:         calc(#{$content-width} - (#{$gap} * 2));
+  max-width: calc(#{$content-width} - (#{$gap} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 0;
@@ -186,12 +180,11 @@ pre {
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$gap}));
-    max-width:         calc(#{$content-width} - (#{$gap}));
+    max-width: calc(#{$content-width} - (#{$gap}));
     padding-right: $gap / 2;
     padding-left: $gap / 2;
   }
 }
-
 
 
 /**
@@ -204,17 +197,16 @@ pre {
 }
 
 
-
 /**
  * Icons
  */
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
-    vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color};
+  padding-right: 5px;
+  vertical-align: text-top;
 }
 
 .social-media-list {
@@ -222,7 +214,6 @@ pre {
     padding-top: 5px;
   }
 }
-
 
 
 /**
@@ -235,19 +226,23 @@ table {
   color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
+
   tr {
     &:nth-child(even) {
       background-color: lighten($grey-color-light, 6%);
     }
   }
+
   th, td {
     padding: ($gap / 3) ($gap / 2);
   }
+
   th {
     background-color: lighten($grey-color-light, 3%);
     border: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
   }
+
   td {
     border: 1px solid $grey-color-light;
   }
