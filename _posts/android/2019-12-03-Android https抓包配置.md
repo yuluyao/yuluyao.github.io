@@ -54,8 +54,6 @@ category: Android 被忽略的知识
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <base-config cleartextTrafficPermitted="true">
-    </base-config>
     <!-- 仅调试模式下 -->
     <debug-overrides>
         <trust-anchors>
