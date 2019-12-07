@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Android 被忽略的知识
+category: android_code
 ---
 
 
