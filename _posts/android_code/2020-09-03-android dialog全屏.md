@@ -19,6 +19,9 @@ Android Dialog 全屏的正确姿势：
       val dm = Resources.getSystem().displayMetrics
       it.setLayout(dm.widthPixels, dm.heightPixels)
       it.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+      // 下面这行可以不加
+      // it.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND) 
+
     }
   }
 ```
