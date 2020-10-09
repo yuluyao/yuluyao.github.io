@@ -15,7 +15,7 @@ Android Dialog 全屏的正确姿势：
   override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
     dialog?.window?.let {
-      it.setBackgroundDrawable(ColorDrawable(Color.parseColor("#00000000")))
+      it.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
       val dm = Resources.getSystem().displayMetrics
       it.setLayout(dm.widthPixels, dm.heightPixels)
       it.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
