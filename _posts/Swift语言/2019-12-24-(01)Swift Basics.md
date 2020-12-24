@@ -146,19 +146,110 @@ let justOverOneMillion = 1_000_000.000_000_1
 
 # Numeric Type Conversion
 
+**数值变量**进行运算时，必须显式地转换类型（但是**数值字面量**在运算时，不用显式转换类型）：
+
+```swift
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let pi = Double(three) + pointOneFourOneFiveNine
+// pi equals 3.14159, and is inferred to be of type Double
+```
+
 
 # Type Aliases
+
+声明类型别名，关键字`typealias`：
+```swift
+typealias AudioSample = UInt16
+```
 
 
 # Booleans
 
+布尔类型`Bool`，它的值有两种：`true`、`false`。
+
+在逻辑判断时，不允许使用非布尔类型代替布尔类型，下面的语句编译不通过：
+```swift
+let i = 1
+if i {
+    // this example will not compile, and will report an error
+}
+```
 
 
 # Tuples
 
+定义元组，并且可以指定元素名称：
+```swift
+let http404Error = (404, "Not Found")
+let http200Status = (statusCode: 200, description: "OK")
+```
+
+解构元组，当不需要使用元组中某个元素时，使用用下划线：
+```swift
+let (statusCode, statusMessage) = http404Error
+let (justTheStatusCode, _) = http404Error
+```
+
+读取元组，可以通过下标或名称访问：
+```swift
+print("The status code is \(http404Error.0)")
+print("The status message is \(http404Error.1)")
+
+print("The status code is \(http200Status.statusCode)")
+print("The status message is \(http200Status.description)")
+```
 
 # Optionals
 
+## 可选类型与`nil`
+当一个常量或变量可能有值或没有值时，使用**可选类型**，任何类型都有与其对应的可选类型，如`Int?`、`String?`。
+
+可选类型变量在声明后会被自动赋值为`nil`：
+```swift
+var surveyAnswer: String?
+// surveyAnswer is automatically set to nil
+```
+
+>>> Swift中的`nil`不同于Objective-C，在Objective-C中，`nil`是一个指向空对象的指针，而Swift中，`nil`不是指针，它表示“值不存在”。
+
+使用exclamation point访问可选类型变量的值，但是如果变量值为`nil`，会产生异常。
+```swift
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
+```
+
+## 可选类型绑定
+
+在`if`或`while`语句中，可以使用可选类型绑定，使用`let`或`var`接收值：
+```swift
+if let constantName = someOptional {
+    statements
+}
+if let actualNumber = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("The string \"\(possibleNumber)\" could not be converted to an integer")
+}
+```
+
+可以一次绑定多个值：
+```swift
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+// Prints "4 < 42 < 100"
+
+if let firstNumber = Int("4") {
+    if let secondNumber = Int("42") {
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
+// Prints "4 < 42 < 100"
+```
 
 # Error Handling
 
