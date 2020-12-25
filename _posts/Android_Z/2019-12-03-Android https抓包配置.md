@@ -1,6 +1,6 @@
 ---
 layout: post
-category: android_code
+category: Android
 ---
 
 

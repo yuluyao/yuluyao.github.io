@@ -1,6 +1,6 @@
 ---
 layout: post
-category: linux
+category: Linux
 ---
 
 PostgreSQL默认不可以远程连接，要修改默认配置以后才可以远程连接。
