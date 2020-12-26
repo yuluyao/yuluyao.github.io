@@ -162,6 +162,6 @@ plugins:
   
 # 8. Others
 # Cross-Origin Resource Sharing header
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"
+# webrick:
+#   headers:
+#     Access-Control-Allow-Origin: "*"
