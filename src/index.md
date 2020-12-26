@@ -2,5 +2,3 @@
 layout: default
 comment: false
 ---
-
-{{ content }}
