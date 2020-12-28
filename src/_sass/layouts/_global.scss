@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  position: static;
+  position: relative;
   // text-align: center;
   background-color: $color-bg;
   background-image: $image-background;
@@ -12,12 +12,12 @@
   top: 2%;
   height: 97%;
   width: 84%;
-  max-width: 1350px;
+  max-width: 1080px;
   position: relative;
   overflow: none;
   margin: 0 auto;
   box-sizing: border-box; // interior border
-  background-color: rgba($color-postbg, 0.72);
+  background-color: $color-postbg;
 }
 .div_article {
   top: $header-height + 1px;
@@ -54,7 +54,7 @@
     left: 0 !important;
     margin: 0;
     // border: $thick-border;
-    background-color: rgba($color-postbg, 0.7);
+    background-color: $color-postbg;
   }
   .page .container .div_article {
     border: none;
