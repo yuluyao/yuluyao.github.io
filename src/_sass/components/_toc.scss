@@ -20,11 +20,11 @@
   overflow-x: hidden;
   @include thin_scrollbar;
   visibility: hidden;
-  background-color: rgba($color-postbg, 0.7);
+  background-color: $color-postbg;
   text-align: left;
   padding: 0px 0;
-  border-left: $medium-border;
-  border-bottom: $medium-border;
+  // border-left: $medium-border;
+  // border-bottom: $medium-border;
   ul {
     padding: 0 4px 0 20px;
     li a {
