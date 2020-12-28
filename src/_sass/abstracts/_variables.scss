@@ -1,19 +1,19 @@
 // global variables
-$color-primary: rgb(34, 230, 8);
-$color-secondary: rgb(255, 247, 141);
-$color-warning: rgb(233, 32, 32);
-$color-bg: rgb(19, 14, 14);
-$color-postbg: rgb(0, 0, 0);
+$color-primary: #333333;
+$color-secondary: #ff3333;
+$color-warning: #ff0000;
+$color-bg: rgb(255, 255, 255);
+$color-postbg: rgb(255, 255, 255);
 $image-background: none;
 
 // font size
-$font-size-h1: 23px;
-$font-size-h2: 21px;
-$font-size-h3: 20px;
-$font-size-h4: 19px;
-$font-size-h5: 18px;
-$font-size-h6: 17.2px;
-$font-size-primary: 16.8px;
+$font-size-h1: 1.5em;
+$font-size-h2: 1.375em;
+$font-size-h3: 1.25em;
+$font-size-h4: 1.125em;
+$font-size-h5: 1em;
+$font-size-h6: 0.96em;
+$font-size-primary: 1em;
 $font-smaller: 90%;
 $font-bigger: 108%;
 $blk-duration: 1.2s;
@@ -35,18 +35,19 @@ $medium-border: 0.9px solid rgba($color-primary, 0.83);
 $thin-border: 0.5px solid rgba($color-primary, 0.6);
 
 // syntax highlight
-$code-primary: $color-primary;
-$comment: $color-secondary;
+$code-primary: #333333;
+$comment: #999999;
 $keyword: #8a31ff;
 $type: rgb(195, 233, 25);
 $variable: #e24637;
 $number: #66faff;
-$string: rgb(230, 126, 29);
+$string: #629755;
 $punctuation: #52acf7;
 $namespace: #8a076d;
 $class: #c43144;
 $built-in: #9e7c7c;
 $global: #52c96c;
 $error: $color-warning;
-$code-background: rgb(19, 16, 16);
+$code-background: #f6f6f6;
+$code-background2: rgba($color-secondary,0.06);
 $error-background: #250f0f;
