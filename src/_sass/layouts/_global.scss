@@ -10,12 +10,11 @@
   top: 0;
   left: 0;
   right: 0;
-  max-width: 1080px;
   position: relative;
   display: flex;
   z-index: 1;
   justify-content: center;
-  padding-top: 4px + 48px;
+  padding-top: $header-height;
   overflow: none;
   margin: 0 auto;
   box-sizing: border-box; // interior border
@@ -25,23 +24,21 @@
   flex-grow: 1;
   z-index: 2;
   overflow-x: hidden;
-  margin-right: 4px;
-  background-color: $color-postbg;
+  max-width: $article-width-max;
+  margin-right: $gap;
+  margin-top: $gap;
 
   article {
     margin: 0;
-    padding: 10px 17px 17px 17px;
+    padding: 1.5em 1em;
     text-align: left !important;
-  }
-  .encrypted {
-    color: rgba($color-warning, 0.9);
-    word-break: break-all;
+    background-color: $color-postbg;
   }
 }
 .div_toc {
   position: -webkit-sticky;
   position: sticky;
-  top: 4px + 48px;
+  top: $header-height + $gap;
   width: 200px;
   flex-shrink: 0;
   overflow-x: hidden;
@@ -71,30 +68,34 @@
   @include fade_in;
 }
 // screen auto-adjustment
-@media screen and (max-width: 800px) {
-  .page .main {
-    width: 100% !important; // to avoid the affect of applyment of toggle_maximize()
-    height: 100% !important;
-    top: 0 !important;
-    left: 0 !important;
-    margin: 0;
-    // border: $thick-border;
-    background-color: $color-postbg;
+@media screen and (max-width: $content-width-max) {
+  // .page .main {
+  //   width: 100% !important; // to avoid the affect of applyment of toggle_maximize()
+  //   top: 0 !important;
+  //   left: 0 !important;
+  //   margin: 0;
+  //   background-color: $color-postbg;
+  // }
+  .div_article {
+    max-width: $article-width-max;
   }
-  .page .main .div_article {
-    border: none;
+  .div_toc {
+    display: none;
   }
+  // .page .main .div_article {
+  //   border: none;
+  // }
 }
-@media screen and (max-width: 800px) and (min-width: 400px) {
-  .page .main .div_article #main_atcl {
-    padding: 12px 17px 17px 17px;
-  }  
-}
-@media screen and (max-width: 400px) {
-  .page .main {
-    border: $medium-border;
-  }
-  .page .main .div_article #main_atcl {
-    padding: 0px 5px 5px 5px ;
-  }
-}
+// @media screen and (max-width: 800px) and (min-width: 400px) {
+//   .page .main .div_article #main_atcl {
+//     padding: 12px 17px 17px 17px;
+//   }  
+// }
+// @media screen and (max-width: 400px) {
+//   .page .main {
+//     border: $medium-border;
+//   }
+//   .page .main .div_article #main_atcl {
+//     padding: 0px 5px 5px 5px ;
+//   }
+// }
