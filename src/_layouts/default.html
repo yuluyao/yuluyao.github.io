@@ -14,9 +14,11 @@
         </article>
       </div>
 
-      <sidebar class="div_toc">
-        {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=2 h_max=3 %}
-      </sidebar>
+      <div class="div_toc">
+        <aside>
+          {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=2 h_max=3 %}
+        </aside>
+      </div>
     </div>
   </body>
 </html>

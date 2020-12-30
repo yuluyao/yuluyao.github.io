@@ -39,22 +39,27 @@
   }
 }
 .div_toc {
-  z-index: 2;
-  max-height: 80%;
   width: 200px;
   flex-shrink: 0;
   overflow-x: hidden;
-  background-color: $color-postbg;
-  text-align: left;
   padding: 0 0;
-  ul {
-    padding: 0 4px 0 20px;
-    li a {
-      font-size: 15px;
-      color: $color-primary;
-      text-decoration: none;
+
+  aside {
+    z-index: 2;
+    overflow-x: hidden;
+    text-align: left;
+    background-color: $color-postbg;
+    ul {
+      padding: 0 4px 0 20px;
+      li a {
+        font-size: 1em;
+        color: $color-primary;
+        text-decoration: none;
+      }
     }
   }
+
+
 }
 // used to toggle absence of elements
 .show {
