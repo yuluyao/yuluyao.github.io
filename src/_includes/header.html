@@ -21,7 +21,7 @@
               <a class="header_btn" href="{{ site.url }}{{ site.baseurl }}">
                 <i class="fa btn_icon fa-home">
                   {% if page.btn_text != false %}
-                  <p class="btn_text">主页</p>
+                  <p class="btn_text">首页</p>
                   {% endif %}
                 </i>
               </a>
@@ -73,13 +73,13 @@
                 </i>
               </a> -->
               <!-- popup table of content -->
-              <a class="header_btn popup_btn" onclick="toggle_toc()">
+              <!-- <a class="header_btn popup_btn" onclick="toggle_toc()">
                 <i class="fa btn_icon fa-list">
                   {% if page.btn_text != false %}
                   <p class="btn_text">目录</p>
                   {% endif %}
                 </i>
-              </a>
+              </a> -->
               {% else %}
               <a class="site_title" href="{{site.url}}{{site.baseurl}}">{{ site.title }}</a>
               {% if site.owner != false%}
@@ -96,10 +96,7 @@
 </div>
 <!-- table of content -->
 {% if page.toc != false %}
-<div class="div_toc toc" id="popup_toc">
-  <!-- generate toc -->
-  {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=1 h_max=3 %}
-</div>
+
 {% endif %}
 <!-- toggle maximize -->
 {% if page.maximize != false %}

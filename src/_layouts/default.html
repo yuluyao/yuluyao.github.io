@@ -2,17 +2,21 @@
 <html>
   {% include head.html %}
   <body class="page">
-    {% include background.html %}
-    <!-- {% include header2.html %} -->
+
     {% include header.html %}
     {% include collection_list.html %}
 
-    <div class="container" id="ctner">
+    <div class="main" id="ctner">
+
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           {{content}}
         </article>
       </div>
+
+      <sidebar class="div_toc">
+        {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=2 h_max=3 %}
+      </sidebar>
     </div>
   </body>
 </html>

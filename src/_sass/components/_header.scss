@@ -1,12 +1,13 @@
 .header {
   position: fixed;
-  text-align: center;
-  height: auto;
-  max-width: 1080px;
-  margin: 0 auto;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: #ffff99;
+  max-width: 1080px;
+  height: 48px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
   z-index: 3;
   // border: $secondary-border;
   // border-bottom: $medium-border;
@@ -87,7 +88,7 @@
   .page .header .nav_bar ul .header_btn .btn_text {
     font-size: 0;
   }  
-  .page .container .header {
+  .page .main .header {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -97,10 +98,10 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .page .container .header .nav_bar ul .site_owner {
+  .page .main .header .nav_bar ul .site_owner {
     font-size: 0;
   }  
-  .page .container .header .nav_bar ul .site_title {
+  .page .main .header .nav_bar ul .site_title {
     font-size: 0%;
   }
 }
