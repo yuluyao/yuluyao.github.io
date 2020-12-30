@@ -3,18 +3,16 @@
   {% include head.html %}
   <body class="page">
     {% include background.html %}
+    {% include header2.html %}
+
     <div class="container" id="ctner">
-      {% include collection_list.html %}  
       {% include header.html %}
+      {% include collection_list.html %}
+
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           {{content}}
-          {% include post_list.html %}
-          {% include comment.html %}
         </article>
-          {% if page.footer != false %}
-          {% include footer.html %}
-          {% endif %}
       </div>
     </div>
   </body>

@@ -8,8 +8,20 @@
   background-color: $color-bg;
   background-image: $image-background;
 }
+.header2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1080px;
+  height: 40px;
+  z-index: 5;
+  margin: 0 auto;
+  background-color: #ffccff;
+  text-align: center;
+}
 .container {
-  top: 2%;
+  top: 40px;
   height: 97%;
   width: 84%;
   max-width: 1080px;
