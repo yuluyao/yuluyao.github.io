@@ -1,8 +1,12 @@
 .header {
-  position: absolute;
+  position: fixed;
   text-align: center;
-  width: 100%;
   height: auto;
+  max-width: 1080px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: #ffff99;
   z-index: 3;
   // border: $secondary-border;
   // border-bottom: $medium-border;

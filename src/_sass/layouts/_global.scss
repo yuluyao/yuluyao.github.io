@@ -29,18 +29,21 @@
   overflow: none;
   margin: 0 auto;
   box-sizing: border-box; // interior border
-  background-color: $color-postbg;
 }
 .div_article {
   top: $header-height + 1px;
   height: 95%;
   width: 100%;
+  max-width: 1080px;
+  margin: auto;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
   @include thin_scrollbar;
   // border: $secondary-border;
   border-top: none;
+  background-color: $color-postbg;
+
   article {
     margin: 0;
     padding: 10px 17px 17px 17px;
