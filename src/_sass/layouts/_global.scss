@@ -19,12 +19,40 @@
   margin: 0 auto;
   box-sizing: border-box; // interior border
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1200px;
+  height: 48px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+  z-index: 3;
+}
+.div_nav {
+  top: $header-height + $gap;
+  width: 200px;
+  align-self: flex-start;
+  height: auto;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  // background-color: #ff99ff;
+  position: sticky;
+  nav {
+    background-color: #ffffff;
+    max-height: 90vh;
+    overflow: scroll;
+  }
+}
 .div_article {
   top: 0;
   flex-grow: 1;
   z-index: 2;
   overflow-x: hidden;
-  max-width: $article-width-max;
+  max-width: 800px;
+  margin-left: $gap;
   margin-right: $gap;
   margin-top: $gap;
 

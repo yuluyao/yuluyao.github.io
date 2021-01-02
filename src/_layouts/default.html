@@ -3,10 +3,41 @@
   {% include head.html %}
   <body class="page">
 
-    {% include header.html %}
-    {% include collection_list.html %}
+    <div class="header">
+      <p>title</p>
+    </div>
 
     <div class="main" id="ctner">
+
+      <div class="div_nav">
+        <nav>
+          {% if site.collection_order %}
+              {% for col_in_order in site.collection_order %}
+                  {% for collection in site.collections %}
+                      {% if collection.label == col_in_order %}
+                          <p class="h_collection_label">
+                              {% assign col_size = collection.docs.size %}
+                              {% if collection.alias %}
+                                  {{collection.alias}}({{col_size}})
+                              {% else %}
+                                  {{collection.label}}
+                              {% endif %}
+                          </p>
+                          <ul style="display: none;" >
+                            {% for post in collection.docs %}
+                              {% if post.publish != false %}
+                                <li>
+                                  <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+                          </ul>
+                      {% endif %}
+                  {% endfor %}
+              {% endfor %}
+          {% endif %}
+        </nav>
+      </div>
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
@@ -20,5 +51,24 @@
         </aside>
       </div>
     </div>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("h_collection_label");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+      </script>
+      
   </body>
 </html>
