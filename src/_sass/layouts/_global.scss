@@ -6,7 +6,7 @@
   background-color: $color-bg;
   background-image: $image-background;
 }
-.main {
+main {
   top: 0;
   left: 0;
   right: 0;
@@ -24,30 +24,37 @@
   top: 0;
   left: 0;
   right: 0;
-  max-width: 1200px;
-  height: 48px;
+  height: $header-height;
   text-align: center;
   margin: 0 auto;
   background-color: #ffffff;
   z-index: 3;
 }
-.div_nav {
+main nav {
+  align-self: flex-start;
+  flex-shrink: 0;
+  position: sticky;
   top: $header-height + $gap;
   width: 200px;
-  align-self: flex-start;
   height: auto;
-  flex-shrink: 0;
+  max-height: 90vh;
   overflow-x: hidden;
-  // background-color: #ff99ff;
-  position: sticky;
-  nav {
-    background-color: #ffffff;
-    max-height: 90vh;
-    overflow: scroll;
-    
+  background-color: #ffffff;
+  overflow: scroll;
+
+  .active {
+    background-color: #99CCFF;
+  }
+  .h_collection_label {
+    margin: 0;
+    padding: 2px 4px;
+    font-weight: 500;
+    &:hover {
+      background-color: #99CCFF;
+    }
   }
 }
-.div_article {
+main article {
   top: 0;
   flex-grow: 1;
   z-index: 2;
@@ -56,15 +63,11 @@
   margin-left: $gap;
   margin-right: $gap;
   margin-top: $gap;
-
-  article {
-    margin: 0;
-    padding: 1.5em 1em;
-    text-align: left !important;
-    background-color: $color-postbg;
-  }
+  padding: 1.5em 1em;
+  text-align: left !important;
+  background-color: $color-postbg;
 }
-.div_toc {
+.main aside {
   position: -webkit-sticky;
   position: sticky;
   top: $header-height + $gap;
@@ -73,29 +76,29 @@
   overflow-x: hidden;
   align-self: flex-start;
   padding: 0 0;
-
-  aside {
-    z-index: 2;
-    overflow-x: hidden;
-    text-align: left;
-    background-color: $color-postbg;
-    ul {
-      padding: 0 4px 0 20px;
-      li a {
+  z-index: 2;
+  text-align: left;
+  background-color: $color-postbg;
+  ul {
+    padding: 0 4px 0 20px;
+    li {
+      &:hover {
+        background-color: #99CCFF;
+      }
+      a {
         font-size: 1em;
         color: $color-primary;
         text-decoration: none;
       }
     }
   }
-
-
 }
 // used to toggle absence of elements
 .show {
   visibility: visible !important;
   @include fade_in;
 }
+
 // screen auto-adjustment
 @media screen and (max-width: $content-width-max) {
   // .page .main {

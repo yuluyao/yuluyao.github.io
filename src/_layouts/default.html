@@ -6,12 +6,11 @@
 
     <!-- header -->
     <div class="header">
-        <p>title</p>
+        <p>Stay foolish!</p>
     </div>
 
-    <div class="main" id="ctner">
+    <main class="main" id="ctner">
         <!-- navigation menu -->
-        <div class="div_nav">
             <nav>
                 {% if site.collection_order %} 
                     {% for col_in_order in site.collection_order %} 
@@ -39,22 +38,16 @@
                     {% endfor %} 
                 {% endif %}
             </nav>
-        </div>
-
         <!-- article -->
-        <div class="div_article" id="div_atcl">
             <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
                 {{content}}
             </article>
-        </div>
 
         <!-- toc aside -->
-        <div class="div_toc">
             <aside>
                 {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=2 h_max=3 %}
             </aside>
-        </div>
-    </div>
+    </main>
 
     <script>
         /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
