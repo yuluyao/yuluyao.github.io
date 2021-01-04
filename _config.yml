@@ -2,7 +2,7 @@
 title               : stay foolish
 owner               : "yuluyao"
 ## url                : "https://akiritsu.github.io"
-## baseurl            : "/pRoJEct-VeXEd"
+baseurl            : "/blog"
 permalink           : /:title/
 description         : "w"
 markdown            : kramdown
