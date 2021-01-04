@@ -8,4 +8,4 @@ encrypted_text: false
 permalink: /
 ---
 
-...
+index page
