@@ -1,8 +1,8 @@
 # 1. Site Settings
 title               : stay foolish
 owner               : "yuluyao"
-## url                : "https://akiritsu.github.io"
-baseurl            : "/blog"
+# url                : "https://akiritsu.github.io"
+# baseurl            : "/blog"
 permalink           : /:title/
 description         : "w"
 markdown            : kramdown
